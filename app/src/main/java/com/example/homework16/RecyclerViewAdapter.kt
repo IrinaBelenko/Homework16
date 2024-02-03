@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class RecyclerViewAdapter (val items: MutableList<Hero>, val onClick:(String)->Unit): RecyclerView.Adapter<RecycleViewHolder>(){
+class RecyclerViewAdapter (private val items: MutableList<Hero>, val onClick:(String)->Unit): RecyclerView.Adapter<RecycleViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecycleViewHolder {
         val listItemView =
             LayoutInflater.from(parent.context).inflate(R.layout.list_item_layout, parent, false)

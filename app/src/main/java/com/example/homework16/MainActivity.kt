@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
         val jsonString = stringBuilder.toString()
         val data = Gson().fromJson(jsonString, Heroes::class.java)
-        val items = data
+        val items = data.heroes
         val myAdapter = RecyclerViewAdapter(items as MutableList<Hero>) {
             Toast.makeText(this, "${it} clicked", Toast.LENGTH_SHORT).show()
         }
